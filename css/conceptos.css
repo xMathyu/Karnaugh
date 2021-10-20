@@ -1,0 +1,70 @@
+html{
+	box-sizing: border-box;
+}
+*,*:after,*:before{
+	box-sizing: inherit;
+}
+header{
+    background-color: #A93226;
+    display: flex;
+    justify-content: center;
+}
+header nav{
+    width: 70%;
+    padding:1rem 0rem;
+}
+header nav h1{
+    color:#fff;
+    font-size: 2rem;
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+}
+header nav a{
+    color:#fff;
+}
+header nav a:hover{
+    color:#fff;
+    opacity: 0.7;
+    text-decoration: none;
+}
+header nav ul{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul li{
+    display: block;
+}
+header nav ul li a{
+    font-family: "Oswald",sans-serif;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+main {
+    flex-flow: row;
+    margin:0 auto;
+    width: 70%;
+    justify-content: center;
+}
+div.row {
+    width: 100%;
+    padding:2rem 0rem;
+}
+div.row:nth-child(0),div.row:nth-child(3){
+    padding-right: 2rem;
+}
+div.row h3{
+    font-family: "Oswald",sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+div.row h3,p{
+    padding: 1rem 0rem;
+    font-family: "Roboto",sans-serif;
+}
+div.row p{
+    line-height: 2rem;
+}

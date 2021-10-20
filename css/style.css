@@ -1,0 +1,188 @@
+/** 
+ * ===================================================================
+ * 01. Estilos Generales
+ *
+ * ------------------------------------------------------------------- 
+ */
+html{
+	box-sizing: border-box;
+}
+
+*,*:after,*:before{
+	box-sizing: inherit;
+}
+/*ESTILOS DE BOTONES*/
+.orange{
+	background-color:#D35400;
+	border: 1px solid #6E2C00;
+}
+
+.negro{
+	background-color:#2B2D2E;
+	color:#fff;
+	border:1px solid #000;
+	width: 50%!important;
+}
+
+.equal{
+	background-color: #A93226;
+	color:#fff;
+	border:1px solid #000;
+}
+/** 
+ * ===================================================================
+ * 02. Encabezado(Header)
+ *
+ * ------------------------------------------------------------------- 
+ */
+header{
+	background-color: #A93226;
+	display: flex;
+	justify-content: center;
+}
+
+header nav{
+	width: 90%;
+	padding:1rem 0rem;
+}
+
+header nav ul{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav h1{
+	color:#fff;
+	font-size: 2rem;
+	font-family: "Oswald",sans-serif;
+	text-transform: uppercase;
+}
+
+header nav ul li{
+	display: block;
+}
+
+header nav ul li:hover,h1:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+header nav ul li a{
+	font-family: "Oswald",sans-serif;
+	color:#fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+/** 
+ * ===================================================================
+ * 03. Contenido Principal(Main)
+ *
+ * ------------------------------------------------------------------- 
+ */
+main{
+	width: 90%;
+	padding: 4rem 0rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: top;
+	margin:0 auto;
+}
+
+main > div{
+	padding: 0rem 4rem;
+}
+/** 
+ * ===================================================================
+ * 3.1. FORMULARIO
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.cajaFormulario form .screen{
+	width: 100%;
+	padding: 2rem;
+}
+
+.cajaFormulario form input[type="button"]{
+	width: 33.333333333%;
+	font-size: 2rem;
+	float:left;
+	display: block;
+	color:#fff;
+	padding: 1rem;
+	font-family: "Roboto",sans-serif;
+}
+
+.cajaFormulario form input[class="equal"]{
+	width: 100%;
+}
+
+.cajaFormulario form input:hover{
+	opacity: 0.8;
+}
+/** 
+ * ===================================================================
+ * 3.2 Tablas De Verdad
+ *
+ * ------------------------------------------------------------------- 
+ */
+.tablasDeVerdad{
+	height: 55vh;
+	border:1px solid #000;
+	overflow-y: scroll;
+}
+
+.primeraFila{
+	text-align: center;
+	font-family: "Roboto",sans-serif;
+}
+
+.tablasDeVerdad div.primeraFila{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
+}
+
+div.primeraFila ul li{
+	padding: 0.8rem;
+	font-size: 1.5rem;
+	border: 1px solid #000;
+	background-color: #2B2D2E;
+	color:#fff;
+}
+/** 
+ * ===================================================================
+ * 3.2.1 Boton Mapa Karnaugh
+ *
+ * ------------------------------------------------------------------- 
+ */
+ div.cajaBotonKarnaugh{
+ 	margin:2rem 8rem;
+ 	text-align: center;
+ }
+ div.cajaBotonKarnaugh a {
+ 	display: block;
+ 	background-color: #A93226;
+ 	font-family: "Oswald",sans-serif;
+ 	text-transform: uppercase;
+ 	padding: 1rem;
+	text-decoration: none;
+	color:#fff;
+ }
+ div.cajaBotonKarnaugh a:hover{
+ 	background-color: #7B160C;
+ 	transition: 1s;
+ }
+/** 
+ * ===================================================================
+ * 3.2.2 Simplificar
+ *
+ * ------------------------------------------------------------------- 
+ */
+ div.cajaSimplificar p{
+ 	text-align: center;
+ 	font-size: 2rem;
+ 	font-family: "Roboto",sans-serif;
+ }

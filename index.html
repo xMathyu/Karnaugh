@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Karnaugh</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mapak.css">
+	
+</head>
+<body>
+	<!--Cabecera de la página
+	===========================================================-->
+	<header>
+		<nav>
+			<ul>
+				<h1>Karnaugh</h1>
+				<li><a href="conceptos.html">Conceptos Técnicos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--CONTENIDO PRINCIPAL
+	===========================================================-->
+	<main>
+		<!--FORMULARIO
+		===========-->
+		<div class="cajaFormulario">
+			<form action="">
+				<input class="screen" id="screen" type="text" disabled="">
+				<input type="button" onclick="mostrarEnPantalla('AC')" class="negro" value="AC">
+				<input type="button" onclick="mostrarEnPantalla('DEL')" class="negro" value="DEL">
+				<input type="button" onclick="mostrarEnPantalla('p')" class="orange" value="p">
+				<input type="button" onclick="mostrarEnPantalla('q')" class="orange" value="q">
+				<input type="button" onclick="mostrarEnPantalla('r')" class="orange" value="r">
+				<input type="button" onclick="mostrarEnPantalla('s')" class="orange" value="s">
+				<input type="button" onclick="mostrarEnPantalla('(')" class="orange" value="(">
+				<input type="button" onclick="mostrarEnPantalla(')')" class="orange" value=")">
+				<input type="button" onclick="mostrarEnPantalla('~')" class="orange" value="~">
+				<input type="button" onclick="mostrarEnPantalla('v')" class="orange" value="v">
+				<input type="button" onclick="mostrarEnPantalla('^')" class="orange" value="^">
+				<input class="equal" onclick="mostrarEnPantalla('=')" type="button" value="=">
+			</form>
+		</div><!--/FORMULARIO-->
+		<div>
+			<!--TABLAS DE VERDAD
+			=================-->
+			<div class="tablasDeVerdad">
+				<div class="primeraFila">
+					<ul id="ulP">
+						<li>P</li>	
+					</ul>
+					<ul id="ulQ">
+						<li>Q</li>		
+					</ul>
+				<ul id="ulR">
+						<li>R</li>			
+					</ul>
+					<ul id="ulS">
+						<li>S</li>			
+					</ul>
+					<ul id="ulFUNC" class="func">
+						<li>FUNC</li>
+					</ul>
+				</div>
+			</div>
+			<!--BOTON DE MAPA KARNAUGH
+				===================-->
+			<div class="cajaBotonKarnaugh" onclick="MostrarKar('=')">
+				<a href="#">Ver Mapa De Karnaugh</a>
+			</div>
+		</div>
+	</main>
+	<!--MAPAS KARNAUGH
+				===================-->
+	<div class="cajaSimplificar"><p>Función Simplificada: <span id="simplificacion"></span></p></div>
+
+	<div id ="map1" class = "main-container" style = "display:none">
+		<table>
+			<tr><th colspan="3">Mapa de Karnaugh</th></tr>
+			<tr>
+				<th></th>
+				<th>0</th>
+				<th>1</th>
+			</tr>
+			<tr>
+				<th>0</th>
+				<td id="map1-11"></td>
+				<td id="map1-12"></td>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td id="map1-21"></td>
+				<td id="map1-22"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id ="map2" class = "main-container" style = "display:none">
+		<table>
+			<tr><th colspan="5">Mapa de Karnaugh</th></tr>
+			<tr>
+				<th></th>
+				<th>00</th>
+				<th>01</th>
+				<th>11</th>
+				<th>10</th>
+			</tr>
+			<tr>
+				<th>0</th>
+				<td id="map2-11"></td>
+				<td id="map2-12"></td>
+				<td id="map2-13"></td>
+				<td id="map2-14"></td>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td id="map2-21"></td>
+				<td id="map2-22"></td>
+				<td id="map2-23"></td>
+				<td id="map2-24"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id ="map3" class = "main-container" style = "display:none">
+		<table>
+			<tr><th colspan="5">Mapa de Karnaugh</th></tr>
+			<tr>
+				<th>PQ \ RS</th>
+				<th>00</th>
+				<th>01</th>
+				<th>11</th>
+				<th>10</th>
+			</tr>
+			<tr>
+				<th>00</th>
+				<td id="map3-11"></td>
+				<td id="map3-12"></td>
+				<td id="map3-13"></td>
+				<td id="map3-14"></td>
+			</tr>
+			<tr>
+				<th>01</th>
+				<td id="map3-21"></td>
+				<td id="map3-22"></td>
+				<td id="map3-23"></td>
+				<td id="map3-24"></td>
+			</tr>
+			<tr>
+				<th>11</th>
+				<td id="map3-31"></td>
+				<td id="map3-32"></td>
+				<td id="map3-33"></td>
+				<td id="map3-34"></td>
+			</tr>
+			<tr>
+				<th>10</th>
+				<td id="map3-41"></td>
+				<td id="map3-42"></td>
+				<td id="map3-43"></td>
+				<td id="map3-44"></td>
+			</tr>
+		</table>
+	</div>
+<script src="js/script.js"></script>
+</body>
+</html>
